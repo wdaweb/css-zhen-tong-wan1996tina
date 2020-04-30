@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .box {
+            margin: auto;
+            width: 500px;
+            height: 100px;
+            background: linear-gradient(90deg, #111 0%, #111 5%, rgba(0, 0, 0, 0)0%) repeat-x 15% 0%/4% 12%, linear-gradient(90deg, #000 20%, rgba(255, 255, 150, 0.3) 0%) no-repeat 225px/55%, linear-gradient(white 0%, #ddd 60%, white 100%);
+            border: 1px solid #999;
+            position: relative;
+            line-height: 180px;
+            color: #999;
+        }
+
+        .box::before {
+            content: '__________';
+            color: rgba(0, 0, 0, 0);
+            text-shadow: 81px 0px #000;
+            line-height: 56px;
+            text-align: end;
+            position: absolute;
+            width: 600px;
+            height: 66px;
+            background: linear-gradient(white 0%, #ddd 50%, white 100%);
+            border: 1px solid #999;
+            border-radius: 0 10px 10px 0;
+            z-index: -1;
+            left: -50px;
+            top: 17px;
+            /* box-shadow: 600px 0px 0px #000; */
+        }
+
+        .box::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 100px;
+            background: linear-gradient(white 0%, #ddd 50%, white 100%);
+            border: 1px solid #999;
+            border-radius: 10px;
+            left: -90px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">Made in Taiwan</div>
+</body>
+
+</html>
